@@ -1,0 +1,33 @@
+I]
+    1) Encapsulation is to protect attributs and methods and the way it integrated in each classes
+    In classes, data can be : public / protected / private ...
+
+    2) setter is to set a attributs (to change his value) and getter is to get the value (it's a method
+    which return you the data in question
+
+    3) this is th call the following attributs in a classe
+        super is to call a parent method
+
+    4)inheritence is to hierarchise classes, a parent class can share methods and attributs
+    with the children ones
+
+    5) Polymorphisme is to modifie the comportement of the daughter class during on inheritence
+    exstends / implements / abstract
+
+    6) the difference is that in a sub-type polymorphisme (example abstract) you can't instantiate
+    an attributs
+
+    7) code
+
+II]
+    1)
+    - static variable is variable which are not attributs of a class and they are not unique of a class
+
+    - static constant is the same as variable but it cannot be change
+
+    - static method work in any classes even is the object is not
+
+    2) because we want to use it in any classes
+
+    3) because 
+

@@ -1,0 +1,44 @@
+
+Test numOfElems
+!Initialized stack : [5,4,3,2,1]
+2Number of elements expected : 5 what we got -> 5
+
+Test end
+
+
+Test peek
+!Initialized stack : [5,4,3,2,1]
+?The first element of the stack should be : 5 what we got -> 5
+PVerify that the stack was not changed : what we got -> [5,4,3,2,1] as expected
+
+Test end
+
+
+Test push
+Initialized stack : []
+BAdding 1 to the stack : Supposed result : [1] what we got -> [1]
+FAdding 2 to the stack : Supposed result : [2,1] what we got -> [2,1]
+JAdding 3 to the stack : Supposed result : [3,2,1] what we got -> [3,2,1]
+
+Test end
+
+
+
+Test pop
+Initialized stack : [3,2,1]
+Tpop 3 to the stack : Supposed result : [2,1] what we got -> [2,1] popd element : 3
+Opop 2 to the list : Supposed result : [1] what we got -> [1] popd element : 2
+TRemoving 1 to the list : Supposed result : [] what we got -> [] dequed element : 1
+
+Test end
+
+
+Test isEmpty
+Initialized stack : []
+>Is this stack empty ? : expected : true, what we got -> true
+*Now we are adding elemnts to the stack :
+Initialized stack : [3,2,1]
+@Is this stack empty ? : expected : false, what we got -> false
+
+Test end
+
