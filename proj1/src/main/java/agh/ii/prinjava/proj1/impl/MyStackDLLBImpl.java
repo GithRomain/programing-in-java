@@ -4,11 +4,17 @@ import agh.ii.prinjava.proj1.MyStack;
 
 public class MyStackDLLBImpl<E> implements MyStack<E> {
     /** the stack is assimiled as a DLinkList*/
-    private DLinkList<E> elems = new DLinkList<>();
+    private DLinkList<E> elems;
+
+    /** constructor of a stack by creating a new instance of DLinkKist*/
+    public MyStackDLLBImpl()
+    {
+        elems = new DLinkList<>();
+    }
 
     /** pop remove element by the start of the stack*/
     @Override
-    public E pop() {
+    public E pop() throws IllegalStateException{
         //if stack is empty then we can't retire any element
         if (isEmpty())
         {
@@ -24,14 +30,7 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
     /** push add elements to a stack by the start of the stack*/
     @Override
     public void push(E x) {
-        if (!(x instanceof E))
-        {
-            throw new IllegalStateException("This queue is a stack of : Integer, you can't push other type like : " + x.getClass());
-        }
-        else
-        {
-            elems.addFirst(x);
-        }
+        elems.addFirst(x);
     }
 
     /** numOfElems return the lenght of the stack*/
@@ -45,7 +44,7 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
 
     /** peek shows the next elemnent to be pop -> the first one*/
     @Override
-    public E peek() {
+    public E peek() throws IllegalStateException {
         E res = null;
         //if stack is empty then we can't show the first element of the stack
         if (isEmpty())

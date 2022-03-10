@@ -2,56 +2,54 @@
 Test numOfElems
 Initialized queue : []
 2Number of elements expected : 0 what we got -> 0
-!Initialized stack : [5,4,3,2,1]
+%New Initialized queue : [1,2,3,4,5]
 2Number of elements expected : 5 what we got -> 5
 
 Test end
 
 
 Test peek
-Initialized stack : []
-fWe are trying to peek an empty stack, what we got -> java.lang.IllegalStateException: Stack is empty
-!Initialized stack : [5,4,3,2,1]
-?The first element of the stack should be : 5 what we got -> 5
-PVerify that the stack was not changed : what we got -> [5,4,3,2,1] as expected
+Initialized queue : []
+fWe are trying to peek an empty queue, what we got -> java.lang.IllegalStateException: Queue is empty
+%New Initialized queue : [1,2,3,4,5]
+>The last element of the queue should be : 5 what we got -> 5
+PVerify that the queue was not changed : what we got -> [1,2,3,4,5] as expected
 
 Test end
 
 
-Test push
-Initialized stack : []
-²Adding 'java' to the stack : Supposed result : error because 'java' is not an integer, what we got -> This queue is a stack of : Integer, you can't push other type than integer
-BAdding 1 to the stack : Supposed result : [1] what we got -> [1]
-FAdding 2 to the stack : Supposed result : [2,1] what we got -> [2,1]
-JAdding 3 to the stack : Supposed result : [3,2,1] what we got -> [3,2,1]
+Test dequeue
+Initialized queue : []
+iWe are trying to dequeue an empty queue, what we got -> java.lang.IllegalStateException: Queue is empty
+!New initialized queue : [1,2,3]
+\Dequeue 3 to the queue : Supposed result : [1,2] what we got -> [1,2] dequeued element : 3
+WDequeue 2 to the list : Supposed result : [1] what we got -> [1] dequeued element : 2
+TRemoving 1 to the list : Supposed result : [] what we got -> [] dequed element : 1
 
 Test end
 
 
-
-Test pop
+Test isEmpty
 Initialized queue : []
-eWe are trying to pop an empty stack, what we got -> java.lang.IllegalStateException: Stack is empty
-!New Initialized stack : [3,2,1]
-Spop 3 to the stack : Supposed result : [2,1] what we got -> [2,1] pop element : 3
-Opop 2 to the stack : Supposed result : [1] what we got -> [1] pop element : 2
-Mpop 3 to the stack : Supposed result : [] what we got -> [] pop element : 1
+>Is this queue empty ? : expected : true, what we got -> true
+*Now we are adding elemnts to the queue :
+Initialized queue : [1,2,3]
+@Is this queue empty ? : expected : false, what we got -> false
 
 Test end
 
 
-Test isEmpty
-Initialized stack : []
->Is this stack empty ? : expected : true, what we got -> true
-*Now we are adding elemnts to the stack :
-Initialized stack : [3,2,1]
-@Is this stack empty ? : expected : false, what we got -> false
+Test toString
+aInitialized queue, what we expected : [1,2,3], what we got -> : [1,2,3] : The String is correct
 
 Test end
 
 
-Test toString
-aInitialized stack, what we expected : [3,2,1], what we got -> : [3,2,1] : The String is correct
+Test enqueue
+Initialized queue : []
+BAdding 1 to the queue : Supposed result : [1] what we got -> [1]
+FAdding 2 to the queue : Supposed result : [1,2] what we got -> [1,2]
+JAdding 3 to the queue : Supposed result : [1,2,3] what we got -> [1,2,3]
 
 Test end
 

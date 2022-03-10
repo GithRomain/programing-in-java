@@ -2,27 +2,28 @@ package agh.ii.prinjava.proj1.impl;
 
 import agh.ii.prinjava.proj1.MyQueue;
 
+import java.awt.image.ImagingOpException;
+
 public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     /** the queue is assimiled as a DLinkList*/
-    private DLinkList<E> elems = new DLinkList<>();
+    private DLinkList<E> elems;
+
+    /** constructor of a queue by creating a new instance of DLinkKist*/
+    public MyQueueDLLBImpl()
+    {
+        elems = new DLinkList<>();
+    }
 
     /** enqueue put the element in last position*/
     @Override
     public void enqueue(E x)
     {
-        if (!(x instanceof E))
-        {
-            throw new IllegalStateException("This queue is a queue of : Integer, you can't enqueue other type like : " + x.getClass());
-        }
-        else
-        {
-            elems.addLast(x);
-        }
+        elems.addLast(x);
     }
 
     /** dequeue remove the element by the end of the queue*/
     @Override
-    public E dequeue()
+    public E dequeue() throws IllegalStateException
     {
         //if queue is empty then we can't retire any element
         if (isEmpty())
@@ -48,7 +49,7 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
 
     /** peek methode return the last element of the queue (the next to become retired)*/
     @Override
-    public E peek()
+    public E peek() throws IllegalStateException
     {
         // we call the last element : "res" and initialized at null
         E res = null;

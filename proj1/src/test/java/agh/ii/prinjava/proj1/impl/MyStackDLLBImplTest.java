@@ -26,34 +26,32 @@ class MyStackDLLBImplTest {
         System.out.println(" push");
         System.out.println("Initialized stack : " + stackOfInts);
 
-        // trying exception case
-        try
-        {
-            System.out.print("Adding 'java' to the stack : Supposed result : error because 'java' is not an integer, what we got -> ");
-            //queueOfInts.enqueue("java") we can't write it, interpretor don't want it;
-        }
-        catch (IllegalStateException illegalStateException)
-        {
-            System.out.println(illegalStateException);
-        }
-        finally {
-            System.out.println("This queue is a stack of : Integer, you can't push other type than integer");
-        }
-
         // We are pushing 1 and verify if it works*/
         System.out.print("Adding 1 to the stack : Supposed result : [1] what we got -> ");
         stackOfInts.push(1);
         System.out.println(stackOfInts);
+//Junit
+assertSame(stackOfInts.pop(), 1);
+        //To not change the list
+        stackOfInts.push(1);
 
         // We are pushing 2 and verify if it works*/
         System.out.print("Adding 2 to the stack : Supposed result : [2,1] what we got -> ");
         stackOfInts.push(2);
         System.out.println(stackOfInts);
+//Junit
+assertSame(stackOfInts.pop(), 2);
+        //To not change the list
+        stackOfInts.push(2);
 
         // We are pushing 3 and verify if it works*/
         System.out.print("Adding 3 to the stack : Supposed result : [3,2,1] what we got -> ");
         stackOfInts.push(3);
         System.out.println(stackOfInts);
+//Junit
+assertSame(stackOfInts.pop(), 3);
+        //To not change the list
+        stackOfInts.push(3);
     }
 
     /** We are testing pop method which is removing the first element of the queue*/
@@ -86,16 +84,22 @@ class MyStackDLLBImplTest {
         System.out.print("pop 3 to the stack : Supposed result : [2,1] what we got -> ");
         res = stackOfInts.pop();
         System.out.println(stackOfInts + " pop element : " + res);
+//Junit
+assertSame(res, 3);
 
         // We are pop 2 at the first place and verify if it works*/
         System.out.print("pop 2 to the stack : Supposed result : [1] what we got -> ");
         res = stackOfInts.pop();
         System.out.println(stackOfInts + " pop element : " + res);
+//Junit
+assertSame(res, 2);
 
         // We are pop 1 and verify if it works*/
         System.out.print("pop 3 to the stack : Supposed result : [] what we got -> ");
         res = stackOfInts.pop();
         System.out.println(stackOfInts + " pop element : " + res);
+//Junit
+assertSame(res, 1);
     }
 
     /** We are testing numOfElemes method which is tell us the number of element in the stack*/
@@ -118,6 +122,9 @@ class MyStackDLLBImplTest {
         System.out.println("Initialized stack : " + stackOfInts);
 
         System.out.println("Number of elements expected : 5 what we got -> " + stackOfInts.numOfElems());
+
+//Junit
+assertSame(stackOfInts.numOfElems(), 5);
     }
 
     /** We are testing peek method which is tell us the next element to be pop in the stack*/
@@ -148,6 +155,9 @@ class MyStackDLLBImplTest {
 
         System.out.println("The first element of the stack should be : 5 what we got -> " + stackOfInts.peek());
         System.out.println("Verify that the stack was not changed : what we got -> " + stackOfInts + " as expected");
+
+//Junit
+assertSame(stackOfInts.peek(), 5);
     }
 
     /** We are testing isEmpty method which is tell us if the stack is empty or not*/
@@ -160,6 +170,9 @@ class MyStackDLLBImplTest {
         System.out.println("Initialized stack : " + stackOfInts);
         System.out.println("Is this stack empty ? : expected : true, what we got -> " + stackOfInts.isEmpty());
 
+//Junit
+assertSame(stackOfInts.isEmpty(), true);
+
         System.out.println("Now we are adding elemnts to the stack :");
         // initialized list
         stackOfInts.push(1);
@@ -167,6 +180,9 @@ class MyStackDLLBImplTest {
         stackOfInts.push(3);
         System.out.println("Initialized stack : " + stackOfInts);
         System.out.println("Is this stack empty ? : expected : false, what we got -> " + stackOfInts.isEmpty());
+
+//Junit
+assertSame(stackOfInts.isEmpty(), false);
     }
 
     /** We are testing toString method which is return the String of the stack to see it properly*/
@@ -181,6 +197,9 @@ class MyStackDLLBImplTest {
         stackOfInts.push(2);
         stackOfInts.push(3);
         System.out.println("Initialized stack, what we expected : [3,2,1], what we got -> : " + stackOfInts + " : The String is correct");
+
+//Junit
+assertTrue(stackOfInts.toString().equals("[3,2,1]"));
     }
 
     /** After every test will say that the test end and skip a line*/
