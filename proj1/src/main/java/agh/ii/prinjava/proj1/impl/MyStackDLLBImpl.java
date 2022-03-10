@@ -3,9 +3,10 @@ package agh.ii.prinjava.proj1.impl;
 import agh.ii.prinjava.proj1.MyStack;
 
 public class MyStackDLLBImpl<E> implements MyStack<E> {
+    /** the stack is assimiled as a DLinkList*/
     private DLinkList<E> elems = new DLinkList<>();
 
-    /** pop remove element from a stack by the start of the stack*/
+    /** pop remove element by the start of the stack*/
     @Override
     public E pop() {
         //if stack is empty then we can't retire any element
@@ -34,7 +35,6 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
         int n = elems.toString().length();
         //we found the length of the queue
         return  n - n/2 - 1;
-
         //throw new IllegalStateException("To be implemented");
     }
 
@@ -49,7 +49,9 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
         }
         else
         {
+            // we are removing the first element and store it to return it
             res = elems.removeFirst();
+            // and we are adding this element to not change the stack
             elems.addFirst(res);
             return res;
         }

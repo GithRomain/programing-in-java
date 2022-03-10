@@ -19,7 +19,7 @@ class DLinkListTest
         System.out.print("Test");
     }
 
-    /** We are testing addFirst methode*/
+    /** Testing addFirst methode*/
     @Test
     void test_addFirst()
     {
@@ -71,7 +71,9 @@ class DLinkListTest
     @Test
     void test_removeFirst()
     {
+        // initialized the element removed later
         int res = 0;
+
         // specify the methode tested
         System.out.println(" removeFirst");
 
@@ -101,7 +103,9 @@ class DLinkListTest
     @Test
     void test_removeLast()
     {
+        // initialized the element removed later
         int res = 0;
+
         // specify the methode tested
         System.out.println(" removeLast");
 
@@ -125,6 +129,20 @@ class DLinkListTest
         System.out.print("Removing 1 to the list : Supposed result : [] what we got -> ");
         res = dLinkList.removeLast();
         System.out.println(dLinkList + " Removed element : " + res);
+    }
+
+    /** We are testing toString method which is return the String of the List to see it properly*/
+    @Test
+    void test_toString()
+    {
+        // specify the methode tested
+        System.out.println(" toString");
+
+        // initialized list
+        dLinkList.addFirst(1);
+        dLinkList.addFirst(2);
+        dLinkList.addFirst(3);
+        System.out.println("Initialized list, what we expected : [3,2,1], what we got -> : " + dLinkList + " : The String is correct");
     }
 
     /** After every test will say that the test end and skip a line*/

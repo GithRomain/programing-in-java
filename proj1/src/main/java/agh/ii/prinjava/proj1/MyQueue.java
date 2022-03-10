@@ -18,7 +18,7 @@ public interface MyQueue<E> {
     /** numOfElems return the lenght of the queue*/
     int numOfElems();
 
-    /** peek shows the next elemnent to be dequeue -> the last one*/
+    /** peek shows the next element to be dequeue -> the last one*/
          E peek();
 
     /** Consider pros and cons of having a factory method in the interface */

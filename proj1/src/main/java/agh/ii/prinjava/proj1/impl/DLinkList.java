@@ -2,7 +2,7 @@ package agh.ii.prinjava.proj1.impl;
 
 public class DLinkList<E>
 {
-    /** DlinkedList is a lot of Nodes collapse each other, so attributs is only Node which are linked*/
+    /** DlinkedList is a lot of Nodes collapse each other, so attribute is only Node which are linked*/
     private Node<E> node;
 
     /** Constructor which initialized the first Node at a null Node, it's the property*/
@@ -18,8 +18,6 @@ public class DLinkList<E>
         if (node == null)
         {
             node = new Node<>(e);
-            // node.prev = null;
-            // node.next = null;
         }
         else
         {
@@ -31,7 +29,6 @@ public class DLinkList<E>
             }
             //then we created a new node
             Node<E> stack = new Node<>(e);
-            // stack.prev = null;
             // and we linked the new one to the first node in the list
             stack.setNext(node);
             // in each orientation
@@ -46,8 +43,6 @@ public class DLinkList<E>
         if (node == null)
         {
             node = new Node<>(e);
-            // node.prev = null;
-            // node.next = null;
         }
         else
         {
@@ -59,7 +54,6 @@ public class DLinkList<E>
             }
             //then we created a new node
             Node<E> stack = new Node<>(e);
-            // stack.next = null;
             // and we linked the new one to the last node in the list
             stack.setPrev(node);
             // in each orientation
@@ -67,9 +61,10 @@ public class DLinkList<E>
         }
     }
 
-    /** removeFirst remove an element at the first position of the list*/
+    /** removeFirst remove the first element of the list*/
     public E removeFirst()
     {
+        // we call the element removed : "res" and initialized at null
         E res = null;
         // we have to place the index of the node on the first one in the list
         while (node.prev != null)
@@ -77,6 +72,7 @@ public class DLinkList<E>
             // while we are not on the first one, we reached the previous one
             node = node.prev;
         }
+        // we take the information of the node and store it in "res"
         res = node.elem;
         // if the list got just one elem -> return empty list
         if (node.prev == null && node.next == null)
@@ -93,10 +89,10 @@ public class DLinkList<E>
         return res;
     }
 
-    /** removeLast remove the last element of the list
-     * @return*/
+    /** removeLast remove the last element of the list*/
     public E removeLast()
     {
+        // we call the element removed : "res" and initialized at null
         E res = null;
         // we have to place the index of the node on the last one in the list
         while (node.next != null)
@@ -162,7 +158,7 @@ public class DLinkList<E>
         Node<T> prev;
         Node<T> next;
 
-        /** Constructor where elem is the value entered and the others Nodes are null and just linked to the node "this"*/
+        /** Constructor where elem is the value entered and the others Nodes are null and just linked to this node*/
         public Node(T elem)
         {
             this.elem = elem;
@@ -170,12 +166,13 @@ public class DLinkList<E>
             this.prev = null;
         }
 
-        /** setters to be more visual and it's usefull*/
+        /** setters of the next Node to be more visual and it's usefull*/
         public void setNext(Node<T> next)
         {
             this.next = next;
         }
 
+        /** setters of the previous Node to be more visual and it's usefull*/
         public void setPrev(Node<T> prev)
         {
             this.prev = prev;

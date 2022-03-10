@@ -1,13 +1,12 @@
 package agh.ii.prinjava.proj1.impl;
 
 import agh.ii.prinjava.proj1.MyQueue;
-import org.w3c.dom.Node;
 
 public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     /** the queue is assimiled as a DLinkList*/
     private DLinkList<E> elems = new DLinkList<>();
 
-    /** to enqueue we have to put the element in last position*/
+    /** enqueue put the element in last position*/
     @Override
     public void enqueue(E x)
     {
@@ -15,7 +14,7 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
         //throw new IllegalStateException("To be implemented");
     }
 
-    /** to dequeue we have to remove element by the end of the queue*/
+    /** dequeue remove the element by the end of the queue*/
     @Override
     public E dequeue()
     {
@@ -45,6 +44,7 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     @Override
     public E peek()
     {
+        // we call the last element : "res" and initialized at null
         E res = null;
         //if queue is empty then we can't show the last element of the queue
         if (isEmpty())
@@ -53,7 +53,9 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
         }
         else
         {
+            // we are removing the last element and store it to return it
             res = elems.removeLast();
+            // and we are adding this element to not change the queue
             elems.addLast(res);
             return res;
         }
