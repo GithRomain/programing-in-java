@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-10T14:54:57" hostname="LAPTOP-N487120A" time="0.08">
+  <properties/>
+  <testcase name="test_numOfElems()" classname="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" time="0.051"/>
+  <testcase name="test_peek()" classname="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" time="0.007"/>
+  <testcase name="test_push()" classname="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" time="0.004"/>
+  <testcase name="test_pop()" classname="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" time="0.009"/>
+  <testcase name="test_isEmpty()" classname="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" time="0.003"/>
+  <testcase name="test_toString()" classname="agh.ii.prinjava.proj1.impl.MyStackDLLBImplTest" time="0.002"/>
+  <system-out><![CDATA[
+Test numOfElems
+Initialized queue : []
+Number of elements expected : 0 what we got -> 0
+Initialized stack : [5,4,3,2,1]
+Number of elements expected : 5 what we got -> 5
+Test end
+
+
+Test peek
+Initialized stack : []
+We are trying to peek an empty stack, what we got -> java.lang.IllegalStateException: Stack is empty
+Initialized stack : [5,4,3,2,1]
+The first element of the stack should be : 5 what we got -> 5
+Verify that the stack was not changed : what we got -> [5,4,3,2,1] as expected
+Test end
+
+
+Test push
+Initialized stack : []
+Adding 'java' to the stack : Supposed result : error because 'java' is not an integer, what we got -> This queue is a stack of : Integer, you can't push other type than integer
+Adding 1 to the stack : Supposed result : [1] what we got -> [1]
+Adding 2 to the stack : Supposed result : [2,1] what we got -> [2,1]
+Adding 3 to the stack : Supposed result : [3,2,1] what we got -> [3,2,1]
+Test end
+
+
+Test pop
+Initialized queue : []
+We are trying to pop an empty stack, what we got -> java.lang.IllegalStateException: Stack is empty
+New Initialized stack : [3,2,1]
+pop 3 to the stack : Supposed result : [2,1] what we got -> [2,1] pop element : 3
+pop 2 to the stack : Supposed result : [1] what we got -> [1] pop element : 2
+pop 3 to the stack : Supposed result : [] what we got -> [] pop element : 1
+Test end
+
+
+Test isEmpty
+Initialized stack : []
+Is this stack empty ? : expected : true, what we got -> true
+Now we are adding elemnts to the stack :
+Initialized stack : [3,2,1]
+Is this stack empty ? : expected : false, what we got -> false
+Test end
+
+
+Test toString
+Initialized stack, what we expected : [3,2,1], what we got -> : [3,2,1] : The String is correct
+Test end
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
