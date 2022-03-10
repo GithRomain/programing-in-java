@@ -27,6 +27,21 @@ class MyQueueDLLBImplTest {
         System.out.println(" enqueue");
         System.out.println("Initialized queue : " + queueOfInts);
 
+        // trying exception case
+        try
+        {
+            System.out.print("Adding 'java' to the queue : Supposed result : error because 'java' is not an integer, what we got -> ");
+            //queueOfInts.enqueue("java") we can't write it, interpretor don't want it;
+        }
+        catch (IllegalStateException illegalStateException)
+        {
+            System.out.println(illegalStateException);
+        }
+        finally {
+            System.out.println("This queue is a queue of : Integer, you can't enqueue other type than integer");
+        }
+
+
         // We are enqueuing 1 and verify if it works*/
         System.out.print("Adding 1 to the queue : Supposed result : [1] what we got -> ");
         queueOfInts.enqueue(1);
@@ -93,13 +108,18 @@ class MyQueueDLLBImplTest {
         // specify the methode tested
         System.out.println(" numOfElems");
 
+
+        // testing empty queue
+        System.out.println("Initialized queue : " + queueOfInts);
+        System.out.println("Number of elements expected : 0 what we got -> " + queueOfInts.numOfElems());
+
         // initialized list
         queueOfInts.enqueue(1);
         queueOfInts.enqueue(2);
         queueOfInts.enqueue(3);
         queueOfInts.enqueue(4);
         queueOfInts.enqueue(5);
-        System.out.println("Initialized queue : " + queueOfInts);
+        System.out.println("New Initialized queue : " + queueOfInts);
 
         System.out.println("Number of elements expected : 5 what we got -> " + queueOfInts.numOfElems());
     }

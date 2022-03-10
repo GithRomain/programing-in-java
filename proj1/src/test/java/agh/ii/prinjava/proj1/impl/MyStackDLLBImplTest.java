@@ -26,6 +26,20 @@ class MyStackDLLBImplTest {
         System.out.println(" push");
         System.out.println("Initialized stack : " + stackOfInts);
 
+        // trying exception case
+        try
+        {
+            System.out.print("Adding 'java' to the stack : Supposed result : error because 'java' is not an integer, what we got -> ");
+            //queueOfInts.enqueue("java") we can't write it, interpretor don't want it;
+        }
+        catch (IllegalStateException illegalStateException)
+        {
+            System.out.println(illegalStateException);
+        }
+        finally {
+            System.out.println("This queue is a stack of : Integer, you can't push other type than integer");
+        }
+
         // We are pushing 1 and verify if it works*/
         System.out.print("Adding 1 to the stack : Supposed result : [1] what we got -> ");
         stackOfInts.push(1);
@@ -90,6 +104,10 @@ class MyStackDLLBImplTest {
     {
         // specify the methode tested
         System.out.println(" numOfElems");
+
+        // testing empty queue
+        System.out.println("Initialized stack : " + stackOfInts);
+        System.out.println("Number of elements expected : 0 what we got -> " + stackOfInts.numOfElems());
 
         // initialized list
         stackOfInts.push(1);

@@ -24,8 +24,14 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
     /** push add elements to a stack by the start of the stack*/
     @Override
     public void push(E x) {
-        elems.addFirst(x);
-        //throw new IllegalStateException("To be implemented");
+        if (!(x instanceof E))
+        {
+            throw new IllegalStateException("This queue is a stack of : Integer, you can't push other type like : " + x.getClass());
+        }
+        else
+        {
+            elems.addFirst(x);
+        }
     }
 
     /** numOfElems return the lenght of the stack*/
@@ -35,7 +41,6 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
         int n = elems.toString().length();
         //we found the length of the queue
         return  n - n/2 - 1;
-        //throw new IllegalStateException("To be implemented");
     }
 
     /** peek shows the next elemnent to be pop -> the first one*/

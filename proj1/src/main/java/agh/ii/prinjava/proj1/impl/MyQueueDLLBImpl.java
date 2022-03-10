@@ -10,8 +10,14 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     @Override
     public void enqueue(E x)
     {
-        elems.addLast(x);
-        //throw new IllegalStateException("To be implemented");
+        if (!(x instanceof E))
+        {
+            throw new IllegalStateException("This queue is a queue of : Integer, you can't enqueue other type like : " + x.getClass());
+        }
+        else
+        {
+            elems.addLast(x);
+        }
     }
 
     /** dequeue remove the element by the end of the queue*/
