@@ -98,7 +98,6 @@ public interface Utils {
                     m.genre(), m.directors(), List.of(a), m.production());
             movies.add(mv);
         }
-
         return movies;
     }
 }

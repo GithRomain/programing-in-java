@@ -170,15 +170,14 @@ class PlayWithMoviesTest {
      */
     @Test
     public void testEx09() {
-//        Map<String, Long> fiveMostFreqActorDuos =
-                PlayWithMovies.ex09();
+        Map<String, Long> fiveMostFreqActorDuos = PlayWithMovies.ex09();
 
-//        assertThat(fiveMostFreqActorDuos).containsAllEntriesOf(Map.of(
-//                "Carrie Fisher, Mark Hamill", 4L,
-//                "Joe Pesci, Robert De Niro", 4L,
-//                "Carrie Fisher, Harrison Ford", 4L,
-//                "Harrison Ford, Mark Hamill", 4L,
-//                "Christian Bale, Michael Caine", 3L));
+        assertThat(fiveMostFreqActorDuos).containsAllEntriesOf(Map.of(
+                "Carrie Fisher, Mark Hamill", 4L,
+                "Joe Pesci, Robert De Niro", 4L,
+                "Carrie Fisher, Harrison Ford", 4L,
+                "Harrison Ford, Mark Hamill", 4L,
+                "Christian Bale, Michael Caine", 3L));
     }
 
     /**
