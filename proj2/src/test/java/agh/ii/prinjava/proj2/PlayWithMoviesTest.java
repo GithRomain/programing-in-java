@@ -52,7 +52,6 @@ class PlayWithMoviesTest {
     @Test
     public void testEx03() {
         Map<String, Long> numOfMoviesPerDirector = PlayWithMovies.ex03();
-        System.out.println(numOfMoviesPerDirector);
         assertThat(numOfMoviesPerDirector.size()).isEqualTo(167);
         assertThat(numOfMoviesPerDirector).containsAllEntriesOf(Map.of(
                 "Tim Burton", 1L,

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="agh.ii.prinjava.proj2.PlayWithMoviesTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-03-31T16:44:21" hostname="LAPTOP-N487120A" time="0.173">
+<testsuite name="agh.ii.prinjava.proj2.PlayWithMoviesTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-03-31T23:46:21" hostname="LAPTOP-N487120A" time="0.18">
   <properties/>
-  <testcase name="testEx01()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.092"/>
-  <testcase name="testEx02()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.001"/>
-  <testcase name="testEx03()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.018"/>
-  <testcase name="testEx04()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.007"/>
-  <testcase name="testEx05()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.006"/>
-  <testcase name="testEx06()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.003"/>
-  <testcase name="testEx07()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.004"/>
-  <testcase name="testEx08()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.005"/>
-  <testcase name="testEx09()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.014"/>
-  <testcase name="testEx10()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.016"/>
-  <system-out><![CDATA[{Bob Clark=1, Otto Preminger=2, Peter Jackson=3, Jim Sheridan=1, Milos Forman=2, Alan Parker=1, Charles Laughton=1, Peter Weir=2, Howard Hawks=3, Peter Bogdanovich=1, Robert Mulligan=1, Edmund Goulding=1, Carol Reed=1, Sean Penn=1, Roger Allers=1, Stanley Donen=1, James Cameron=3, Michael Curtiz=1, Robert Rodriguez=1, John McTiernan=1, Chris Sanders=1, Irvin Kershner=1, Tim Burton=1, Mel Gibson=2, Michael Mann=1, Robert Rossen=1, Edward Zwick=1, Lenny Abrahamson=1, Ron Clements=1, Gore Verbinski=1, Harold Ramis=1, Guy Ritchie=2, Stuart Rosenberg=1, Alfred Hitchcock=9, Loveleen Tandan=1, Ridley Scott=4, David Yates=1, John Musker=1, Sam Peckinpah=1, Tom Hooper=1, John Ford=2, Robert Aldrich=1, Lee Unkrich=3, Wes Anderson=1, Tomm Moore=1, Oliver Stone=2, Jared Bush=1, Pete Docter=3, Barry Levinson=1, John Carpenter=1, Norman Taurog=1, Mel Brooks=1, Victor Fleming=2, Lasse Hallström=1, Tony Kaye=1, Joseph L. Mankiewicz=2, Tom McCarthy=1, George Roy Hill=2, Darren Aronofsky=1, Martin Scorsese=7, Joel Coen=3, Steven Spielberg=7, Bryan Singer=1, King Vidor=1, Clint Eastwood=3, George Lucas=1, Lars von Trier=1, Gavin O'Connor=1, Richard Linklater=2, Woody Allen=1, Gene Kelly=1, Paul Greengrass=1, Francis Ford Coppola=3, J.J. Abrams=1, Moustapha Akkad=1, Jon Watts=1, Andrew Stanton=2, William Wyler=3, Kirk Wise=1, Luc Besson=1, Tate Taylor=1, Sidney Lumet=3, Charles Chaplin=5, Eli Roth=1, Terry Jones=2, Mervyn LeRoy=1, Stanley Kubrick=8, John Huston=2, Sam Mendes=1, Lewis Milestone=1, Fred Zinnemann=1, Frank Capra=4, David Fincher=3, William Friedkin=1, Jacques Tourneur=1, Ron Howard=2, George Cukor=3, Rob Reiner=2, Gus Van Sant=1, Richard Kelly=1, Elia Kazan=2, Tim Miller=1, Frank Darabont=2, Sam Wood=2, David Silverman=1, John Frankenheimer=1, Mike Nichols=2, Robert Hamer=1, Destin Daniel Cretton=1, Wim Wenders=1, Steve McQueen=1, Richard Brooks=1, Franklin J. Schaffner=2, Terry Gilliam=2, Stanley Kramer=1, Lana Wachowski=1, Ethan Coen=3, Clyde Bruckman=1, Frank Miller=1, Garth Davis=1, Dean DeBlois=1, Orson Welles=2, Adam Elliot=1, Edgar Wright=1, Morten Tyldum=1, Christopher Nolan=7, John G. Avildsen=1, Terry George=1, Paul Thomas Anderson=2, Gary Trousdale=1, Rob Minkoff=1, Henry Koster=1, Giuseppe Tornatore=1, James Gunn=2, Buster Keaton=1, David Lynch=2, Roman Polanski=2, Joss Whedon=1, Richard Marquand=1, Lilly Wachowski=1, Michel Gondry=1, Jonathan Demme=1, Quentin Tarantino=6, Bob Peterson=1, Billy Wilder=7, Curtis Hanson=1, Alejandro González Iñárritu=1, Sergio Leone=1, Michael Cimino=1, John Lasseter=1, Richard Attenborough=1, John Sturges=1, David Lean=3, Robert Zemeckis=2, Henry Selick=1, Ronnie Del Carmen=1, Damien Chazelle=2, James Mangold=1, Byron Howard=1, Denis Villeneuve=1, M. Night Shyamalan=1, James McTeigue=1, Brian De Palma=1, George Miller=1, Rich Moore=1, Billy Bob Thornton=1, Danny Boyle=2}
-]]></system-out>
+  <testcase name="testEx01()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.144"/>
+  <testcase name="testEx02()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.003"/>
+  <testcase name="testEx03()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.013"/>
+  <testcase name="testEx04()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.0"/>
+  <testcase name="testEx05()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.002"/>
+  <testcase name="testEx06()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.002"/>
+  <testcase name="testEx07()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.002"/>
+  <testcase name="testEx08()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.003"/>
+  <testcase name="testEx09()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.003"/>
+  <testcase name="testEx10()" classname="agh.ii.prinjava.proj2.PlayWithMoviesTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
