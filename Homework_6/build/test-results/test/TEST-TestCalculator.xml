@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestCalculator" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-24T18:21:55" hostname="LAPTOP-N487120A" time="0.032">
+  <properties/>
+  <testcase name="Test Composition" classname="TestCalculator" time="0.022"/>
+  <testcase name="Test Multiplication" classname="TestCalculator" time="0.001"/>
+  <testcase name="Test addition" classname="TestCalculator" time="0.001"/>
+  <testcase name="Test Division Error" classname="TestCalculator" time="0.002"/>
+  <testcase name="Test substraction" classname="TestCalculator" time="0.001"/>
+  <testcase name="Test Division" classname="TestCalculator" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -27,6 +27,10 @@ class C extends B {
 class GenBox<T> {
     private T x;
 
+    public GenBox() {
+
+    }
+
     public GenBox(T x) {
         this.x = x;
     }
@@ -162,6 +166,32 @@ public class Main {
         //copy_v1(gbc1, gbB2); // compilation error (Incompatible equality constraints)
         copy_v2(gbc1, gbA2); // OK
         copy_v2(gbc1, gbB2); // OK
+
+        GenBox<B> gb1 = new GenBox<B>();
+        //GenBox<B> gb2 = new GenBox<A>();
+        //GenBox<B> gb3 = new GenBox<C>();
+        B b1 = gb1.getX();
+        gb1.setX(new B());
+
+        GenBox<? extends B> gb4 = new GenBox<B>();
+        GenBox<? extends B> gb5 = new GenBox<C>();
+        //GenBox<? extends B> gb6 = new GenBox<A>();
+        B b2 = gb5.getX();
+        //gb5.setX(new B());
+        //gb5.setX(new C());
+
+        GenBox<? super B> gb7 = new GenBox<B>();
+        //GenBox<? super B> gb8 = new GenBox<C>();
+        GenBox<? super B> gb9 = new GenBox<A>();
+        //B b3 = gb9.getX();
+        gb9.setX(new B());
+        gb9.setX(new C());
+
+        GenBox<?> gb10 = new GenBox<B>();
+        GenBox<?> gb11 = new GenBox<C>();
+        GenBox<?> gb12 = new GenBox<A>();
+        //B b4 = gb10.getX();
+        //gb10.setX(new B());
     }
 
     public static void main(String[] args) {

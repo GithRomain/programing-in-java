@@ -113,17 +113,23 @@ public class Main {
         System.out.println("demo2...");
 
         // Never use raw types!!!
-        GenBox b1 = new GenBox(3); // raw type, compiles, but... (T ~ Object)
-        //int x = b1.getX(); // <- Required type: int. Provided: Object
-        int x = (int) b1.getX();
-        System.out.println("x from b1 = " + x);
+//        GenBox b1 = new GenBox(1); // raw type, compiles, but... (T ~ Object)
+//        //int x = b1.getX(); // <- Required type: int. Provided: Object
+//        b1.setX("abc");
+//        b1.setX(new GenBox(true));
+//        var x = b1.getX();
+//        System.out.println(x);
+
+        GenBox<Integer> gb2 = new GenBox<>(1);
+//        gb2.setX("abc");
+//        gb2.setX(new GenBox(true));
 
         /*
          * String y = (String) b1.getX(); // <- ClassCastException
          * System.out.println("y (as String) from b1 = " + y);
          */
-        String y = b1.getX().toString();
-        System.out.println("y from getX().toString() = " + y);
+//        String y = b1.getX().toString();
+//        System.out.println("y from getX().toString() = " + y);
     }
 
     public static void main(String[] args) {

@@ -146,7 +146,7 @@ public class Main {
 
         GenClassA<CA> gcA = new GenClassA<>(); // OK, CA implements IA, class GenClassA<T extends IA>
         gcA.m1(new CA());
-        // gcA.m1(new CB()); // Requires type CA, provided with CB
+        //gcA.m1(new CB()); // Requires type CA, provided with CB
         System.out.println("---");
 
         GenClassA<CB> gcB = new GenClassA<>();

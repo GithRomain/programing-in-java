@@ -18,7 +18,10 @@ public interface MyStack<E> {
     /** numOfElems return the lenght of the stack*/
     int numOfElems();
 
-    /** peek shows the next element to be pop -> the first one*/
+    /**
+     * shows the next element to be pop -> the first one
+     * @return E
+     */
     E peek();
 
     /** Consider pros and cons of having a factory method in the interface

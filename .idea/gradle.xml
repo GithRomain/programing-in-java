@@ -9,12 +9,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Homework_6" />
             <option value="$PROJECT_DIR$/lab00" />
             <option value="$PROJECT_DIR$/lab01" />
             <option value="$PROJECT_DIR$/lab02" />
             <option value="$PROJECT_DIR$/lab03" />
             <option value="$PROJECT_DIR$/lab04" />
+            <option value="$PROJECT_DIR$/lab05" />
+            <option value="$PROJECT_DIR$/lab06" />
+            <option value="$PROJECT_DIR$/lab07" />
             <option value="$PROJECT_DIR$/proj1" />
+            <option value="$PROJECT_DIR$/proj2" />
+            <option value="$PROJECT_DIR$/unit-tests" />
           </set>
         </option>
       </GradleProjectSettings>

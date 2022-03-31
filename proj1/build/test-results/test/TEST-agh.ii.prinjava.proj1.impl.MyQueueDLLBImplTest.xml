@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-11T08:09:00" hostname="LAPTOP-N487120A" time="0.101">
+  <properties/>
+  <testcase name="test_numOfElems()" classname="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" time="0.06"/>
+  <testcase name="test_peek()" classname="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" time="0.006"/>
+  <testcase name="test_dequeue()" classname="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" time="0.009"/>
+  <testcase name="test_isEmpty()" classname="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" time="0.009"/>
+  <testcase name="test_toString()" classname="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" time="0.006"/>
+  <testcase name="test_enqueue()" classname="agh.ii.prinjava.proj1.impl.MyQueueDLLBImplTest" time="0.003"/>
+  <system-out><![CDATA[
+Test numOfElems
+Initialized queue : []
+Number of elements expected : 0 what we got -> 0
+New Initialized queue : [1,2,3,4,5]
+Number of elements expected : 5 what we got -> 5
+Test end
+
+
+Test peek
+Initialized queue : []
+We are trying to peek an empty queue, what we got -> java.lang.IllegalStateException: Queue is empty
+New Initialized queue : [1,2,3,4,5]
+The last element of the queue should be : 5 what we got -> 5
+Verify that the queue was not changed : what we got -> [1,2,3,4,5] as expected
+Test end
+
+
+Test dequeue
+Initialized queue : []
+We are trying to dequeue an empty queue, what we got -> java.lang.IllegalStateException: Queue is empty
+New initialized queue : [1,2,3]
+Dequeue 3 to the queue : Supposed result : [1,2] what we got -> [1,2] dequeued element : 3
+Dequeue 2 to the list : Supposed result : [1] what we got -> [1] dequeued element : 2
+Removing 1 to the list : Supposed result : [] what we got -> [] dequed element : 1
+Test end
+
+
+Test isEmpty
+Initialized queue : []
+Is this queue empty ? : expected : true, what we got -> true
+Now we are adding elemnts to the queue :
+Initialized queue : [1,2,3]
+Is this queue empty ? : expected : false, what we got -> false
+Test end
+
+
+Test toString
+Initialized queue, what we expected : [1,2,3], what we got -> : [1,2,3] : The String is correct
+Test end
+
+
+Test enqueue
+Initialized queue : []
+Adding 1 to the queue : Supposed result : [1] what we got -> [1]
+Adding 2 to the queue : Supposed result : [1,2] what we got -> [1,2]
+Adding 3 to the queue : Supposed result : [1,2,3] what we got -> [1,2,3]
+Test end
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

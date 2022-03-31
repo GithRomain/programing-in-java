@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.edu.agh.ooad.Exercise05ChangeTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2022-03-16T15:59:19" hostname="LAPTOP-N487120A" time="0.041">
+  <properties/>
+  <testcase name="Test change classic values" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.021"/>
+  <testcase name="Test change negative value" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.002"/>
+  <testcase name="Test change 18" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.0"/>
+  <testcase name="Test change 20" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 5" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 4 for check if we take the big one numer" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 0" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 38" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 88" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.0"/>
+  <testcase name="Test change 8" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.0"/>
+  <testcase name="Test change 50" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.0"/>
+  <testcase name="Test change 3" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 1" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.002"/>
+  <testcase name="Test change 10" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.001"/>
+  <testcase name="Test change 2" classname="pl.edu.agh.ooad.Exercise05ChangeTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
