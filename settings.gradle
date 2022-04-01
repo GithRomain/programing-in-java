@@ -7,9 +7,11 @@ include 'lab04'
 include 'lab05'
 include 'lab06'
 include 'lab07'
+include 'lab09'
 
 include 'unit-tests'
 include 'Homework_6'
 
 include 'proj1'
 include 'proj2'
+include 'proj3'

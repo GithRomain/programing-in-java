@@ -8,10 +8,7 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Supplier;
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
 /**
  * Classes from {@link java.util.stream} support functional-style operations on streams of elements,
@@ -71,6 +68,13 @@ public class Main {
         Stream<Integer> s2 = Stream.of(1, 2, 3, 4, 5); // finite source
         s2.forEach(System.out::println);
         System.out.println("---");
+
+        System.out.println(Stream.of("AaA", "BbBb", "CcCcC")
+                .flatMap(s -> Arrays.stream(s.split("")).map(String::toLowerCase))
+                .collect(Collectors.groupingBy(e -> e, Collectors.counting()))
+                .entrySet().stream()
+                .max(Comparator.comparingLong(Map.Entry::getValue)).orElseThrow());
+
     }
 
     /**

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="lab09_sqlite" uuid="d0520ef6-af4a-44c9-93fc-af1f68731d69">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\37rom\OneDrive - Efrei\Ecole\EFREI\Semestre 6\Java programming\TD\programing-in-java\lab09\datasources\lab09_sqlite.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="imdb_top250_empty" uuid="7d78473e-1434-4a71-b9e0-bc3f9eee31cc">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\37rom\OneDrive - Efrei\Ecole\EFREI\Semestre 6\Java programming\TD\programing-in-java\lab09\datasources\imdb_top250_empty.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="imdb_top250" uuid="4a43b4e5-ed24-4104-a630-5e7ad9319df2">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\37rom\OneDrive - Efrei\Ecole\EFREI\Semestre 6\Java programming\TD\programing-in-java\lab09\datasources\imdb_top250.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="imdb_top250 [2]" uuid="6daf1cfe-2250-4478-9309-c6060dfbedb7">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\37rom\OneDrive - Efrei\Ecole\EFREI\Semestre 6\Java programming\TD\programing-in-java\proj3\datasources\imdb_top250.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.36.0.3/sqlite-jdbc-3.36.0.3.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/SQL Server/10.2.0/com/microsoft/sqlserver/mssql-jdbc/10.2.0.jre8/mssql-jdbc-10.2.0.jre8.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
