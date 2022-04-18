@@ -21,18 +21,22 @@ public class MovieDAO {
     public Optional<Set<String>> moviesDirectedBy(String directorName) {
         try (Connection con = DriverManager.getConnection(dbURL);
              PreparedStatement stmt = con.prepareStatement(MovieSQLs.moviesOfDirectorSQL)) {
-                Set<String> setTitleMoviesDirecetedBy = new LinkedHashSet<>();
-                stmt.setString(1, directorName);
-                ResultSet rs = stmt.executeQuery();
-                while (rs.next()) {
-                    String title = rs.getString("title");
-                    setTitleMoviesDirecetedBy.add(title);
-                }
-                return Optional.of(setTitleMoviesDirecetedBy);
+            return getStrings(directorName, stmt);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    private Optional<Set<String>> getStrings(String directorName, PreparedStatement stmt) throws SQLException {
+        Set<String> setTitleMoviesDirecetedBy = new LinkedHashSet<>();
+        stmt.setString(1, directorName);
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            String title = rs.getString("title");
+            setTitleMoviesDirecetedBy.add(title);
+        }
+        return Optional.of(setTitleMoviesDirecetedBy);
     }
 
     /**
@@ -41,14 +45,7 @@ public class MovieDAO {
     public Optional<Set<String>> moviesTheActorPlayedIn(String actorName) {
         try (Connection con = DriverManager.getConnection(dbURL);
              PreparedStatement stmt = con.prepareStatement(MovieSQLs.moviesOfActorSQL)) {
-                Set<String> setTitleMoviesActorPlayedIn = new LinkedHashSet<>();
-                stmt.setString(1, actorName);
-                ResultSet rs = stmt.executeQuery();
-                while (rs.next()) {
-                    String title = rs.getString("title");
-                    setTitleMoviesActorPlayedIn.add(title);
-                }
-                return Optional.of(setTitleMoviesActorPlayedIn);
+            return getStrings(actorName, stmt);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -61,18 +58,22 @@ public class MovieDAO {
     public Optional<Map<String, Long>> numberOfMoviesPerDirector() {
         try (Connection con = DriverManager.getConnection(dbURL);
              PreparedStatement stmt = con.prepareStatement(MovieSQLs.numberOfMoviesPerDirectorSQL)) {
-                Map<String, Long> mapNumberOfMoviesPerDirector = new LinkedHashMap<>();
-                ResultSet rs = stmt.executeQuery();
-                while (rs.next()) {
-                    String name = rs.getString("director");
-                    Long num = rs.getLong("numOfMovies");
-                    mapNumberOfMoviesPerDirector.put(name, num);
-                }
-                return Optional.of(mapNumberOfMoviesPerDirector);
+            return getStringLongMap(stmt);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    private Optional<Map<String, Long>> getStringLongMap(PreparedStatement stmt) throws SQLException {
+        Map<String, Long> mapNumberOfMoviesPerDirector = new LinkedHashMap<>();
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            String name = rs.getString("director");
+            Long num = rs.getLong("numOfMovies");
+            mapNumberOfMoviesPerDirector.put(name, num);
+        }
+        return Optional.of(mapNumberOfMoviesPerDirector);
     }
 
     /**
@@ -81,14 +82,7 @@ public class MovieDAO {
     public Optional<Map<String, Long>> numberOfMoviesPerTop10Director() {
         try (Connection con = DriverManager.getConnection(dbURL);
              PreparedStatement stmt = con.prepareStatement(MovieSQLs.numOfMoviesPerTop10DirectorSQL)) {
-                Map<String, Long> mapNumberOfMoviesTop10PerDirector = new LinkedHashMap<>();
-                ResultSet rs = stmt.executeQuery();
-                while (rs.next()) {
-                    String name = rs.getString("director");
-                    Long num = rs.getLong("numOfMovies");
-                    mapNumberOfMoviesTop10PerDirector.put(name, num);
-                }
-                return Optional.of(mapNumberOfMoviesTop10PerDirector);
+            return getStringLongMap(stmt);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -121,18 +115,22 @@ public class MovieDAO {
     public Optional<Map<String, Long>> numberOfMoviesPerActor() {
         try (Connection con = DriverManager.getConnection(dbURL);
              PreparedStatement stmt = con.prepareStatement(MovieSQLs.numberOfMoviesPerActorSQL)) {
-            Map<String, Long> mapNumberOfMoviesPerActor = new LinkedHashMap<>();
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                String name = rs.getString("actor");
-                Long num = rs.getLong("numOfMovies");
-                mapNumberOfMoviesPerActor.put(name, num);
-            }
-            return Optional.of(mapNumberOfMoviesPerActor);
+            return getStringLongMapp(stmt);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+
+    private Optional<Map<String, Long>> getStringLongMapp(PreparedStatement stmt) throws SQLException {
+        Map<String, Long> mapNumberOfMoviesPerActor = new LinkedHashMap<>();
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            String name = rs.getString("actor");
+            Long num = rs.getLong("numOfMovies");
+            mapNumberOfMoviesPerActor.put(name, num);
+        }
+        return Optional.of(mapNumberOfMoviesPerActor);
     }
 
     /**
@@ -141,14 +139,7 @@ public class MovieDAO {
     public Optional<Map<String, Long>> numberOfMoviesPerTop9Actor() {
         try (Connection con = DriverManager.getConnection(dbURL);
              PreparedStatement stmt = con.prepareStatement(MovieSQLs.numOfMoviesPerTop9ActorSQL)) {
-            Map<String, Long> mapNumberOfMoviesPerTop9Actor = new LinkedHashMap<>();
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                String name = rs.getString("actor");
-                Long num = rs.getLong("numOfMovies");
-                mapNumberOfMoviesPerTop9Actor.put(name, num);
-            }
-            return Optional.of(mapNumberOfMoviesPerTop9Actor);
+            return getStringLongMapp(stmt);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -209,7 +200,7 @@ public class MovieDAO {
                 String name1 = rs.getString("actor1");
                 String name2 = rs.getString("actor2");
                 String nameDuo = name1 + ", " + name2;
-                Long num = rs.getLong("cnt");
+                long num = rs.getLong("cnt");
                 Set<String> setTitleMoviesActorDuoPlayedIn = new LinkedHashSet<>();
                 for (int i = 0; i < num; i++)
                 {
